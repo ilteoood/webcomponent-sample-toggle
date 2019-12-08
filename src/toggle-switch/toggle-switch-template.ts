@@ -1,23 +1,18 @@
 import { html } from "lit-html";
-import { LitElement, property } from "lit-element";
+import { customElement } from 'lit-element';
 import { ToggleSwitch } from "./toggle-switch";
 
-export class ToggleSwitchTemplate {
+@customElement(ToggleSwitchTemplate.is)
+export class ToggleSwitchTemplate extends ToggleSwitch {
 
-    private toggleSwitch: ToggleSwitch;
-
-    constructor(toggleSwitch: ToggleSwitch) {
-        this.toggleSwitch = toggleSwitch;
-    }
-
-    render() {
-        return html`
-          <span class="off">${this.toggleSwitch.leftLabel}</span>
+  render() {
+    return html`
+          <span class="off">${this.leftLabel}</span>
           <label class="switch">
-            <input type="checkbox" ?checked=${this.toggleSwitch.currentState} @click=${this.toggleSwitch.emitToggleEvent}>
+            <input type="checkbox" ?checked=${this.currentState} @click=${this.emitToggleEvent}>
             <span class="slider round"></span>
           </label>
-          <span class="on">${this.toggleSwitch.rightLabel}</span>
+          <span class="on">${this.rightLabel}</span>
         `;
-    }
+  }
 }

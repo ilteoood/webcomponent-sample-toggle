@@ -1,7 +1,8 @@
 import { css } from "lit-element";
+import { ToggleSwitchBase } from "./toggle-switch-base";
 
-export class ToggleSwitchStyle {
-  static styles() {
+export class ToggleSwitchStyle extends ToggleSwitchBase {
+  static get styles() {
     return css`
         .switch {
           position: relative;

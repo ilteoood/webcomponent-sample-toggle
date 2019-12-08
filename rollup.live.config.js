@@ -6,7 +6,7 @@ import typescriptPlugin from "rollup-plugin-typescript";
 import typescript from "typescript";
 
 export default {
-  input: "src/toggle-switch/toggle-switch.ts",
+  input: "src/toggle-switch/toggle-switch-template.ts",
   output: {
     file: "./dist/toggle-switch.js",
     format: "esm",
