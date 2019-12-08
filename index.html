@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>toggle-switch Web Component</title>
+  <script src="dist/toggle-switch.js" type="module"></script>
+  <style></style>
+</head>
+
+<body>
+  <toggle-switch left-label='Off' right-label='On' current-state="true"></toggle-switch>
+  <script>
+    document.querySelector("toggle-switch").addEventListener('toggleSwitchToggled', (event) => {
+      console.log(event);
+    });
+  </script>
+</body>
+</html>

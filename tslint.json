@@ -1,0 +1,9 @@
+{
+  "include": [
+    "toggle-switch.d.ts"
+  ],
+  "extends": [
+    "@messageflow/tslint-config"
+  ],
+  "rules": {}
+}
