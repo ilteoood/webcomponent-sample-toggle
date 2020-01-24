@@ -1,0 +1,6 @@
+<span class="off">${currentInstance.leftLabel}</span>
+<label class="switch">
+    <input type="checkbox" ?checked=${currentInstance.currentState} @click=${currentInstance.emitToggleEvent}>
+    <span class="slider round"></span>
+</label>
+<span class="on">${currentInstance.rightLabel}</span>
